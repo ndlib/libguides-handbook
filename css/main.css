@@ -776,7 +776,15 @@ h3.jumbotronic {
 }
 
 .push-down {
+   margin-top: 1rem !important;
+}
+
+.push-down-2 {
    margin-top: 2rem !important;
+}
+
+.push-down-3 {
+   margin-top: 3rem !important;
 }
 
 .push-up {
@@ -785,6 +793,11 @@ h3.jumbotronic {
 
 hr {
    border-top: 2px solid gainsboro !important;
+}
+
+hr.separatist {
+   margin-top: 0px;
+   margin-bottom: 0px;
 }
 
 .checklist-step {
