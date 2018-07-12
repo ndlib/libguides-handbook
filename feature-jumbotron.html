@@ -301,12 +301,14 @@
                            </select>
                         </div>
 
-                        <label for="icon-html" style="margin-top: 20px;">Optional Icon <small>(or Text)</small></label>
-                        <div class="input-group">
+                        <div id="optional-icon-hider" class="hidden">
+                           <label for="icon-html">Optional Icon <small>(or Text)</small></label>
+                           <div class="input-group">
                               <span style="height: 16px;" class="input-group-addon" id="refresh-button3"><i class="fa fa-refresh" aria-hidden="true"></i></span>
                               <input type="text" class="form-control" id="button-icon" placeholder="<i class='fa fa-up'></i>">
                            </div>
                            <p style="margin-left: 6px;" class="text-left"><a href="feature-icon.html" target="_blank"><small><i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp; Find Icon</small></a></p>
+                        </div>
 
                         <div class="form-group hidden" id="button-url-group">
                            <label for="button-url">Button URL</label>
@@ -346,7 +348,7 @@
                         <i class="fa fa-clipboard" aria-hidden="true"></i>
                         </button>
 
-<pre class="prettyprint" id="simple-jumbotron-code">
+                        <pre class="prettyprint" id="simple-jumbotron-code">
 &lt;div class='jumbotron' style='background-size: cover; background-image: url("https://libapps.s3.amazonaws.com/accounts/38465/images/Africana-mini.jpg");'&gt;
    &lt;h3 style='color:#ffffff' class='jumbotronic'&gt;
       Africana Studies
@@ -606,7 +608,7 @@
          if ($('#jumbotron-background').val() == 'image') {
             $("#image-selection-div").removeClass("hidden");
             $('#background-color-hex-input').addClass('hidden');
-         } else if($('#jumbotron-background').val() == 'hex') {
+         } else if ($('#jumbotron-background').val() == 'hex') {
             $("#image-selection-div").addClass("hidden");
             $('#background-color-hex-input').removeClass('hidden');
          } else {
@@ -621,7 +623,7 @@
             addImage = " style='background-size: cover; background-image: url(\"" + imageURL + "\");'";
             $('#jumbotron-background').val('image');
             $('#background-color-hex-input').addClass('hidden');
-         } else  {
+         } else {
             addImage = " style='background:" + setBackground + "'";
          }
       });
@@ -633,12 +635,13 @@
             $('#button-title-group').addClass('hidden');
             $('#button-url-group').addClass('hidden');
             $('#button-alignment-div').addClass('hidden');
-            alert($('#button-color').val());
+            $('#optional-icon-hider').addClass('hidden');
 
          } else {
             $('#button-title-group').removeClass('hidden');
             $('#button-url-group').removeClass('hidden');
             $('#button-alignment-div').removeClass('hidden');
+            $('#optional-icon-hider').removeClass('hidden');
          }
       });
 
