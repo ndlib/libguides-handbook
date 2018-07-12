@@ -181,8 +181,9 @@ h1 .small, h1 small {
 
 .alert-intro {
     color: #000000;
-    background-color: #f1f6f6;
-    background: #f1f6f6;
+    background-color: ghostwhite;
+    /* background-color: #f1f6f6;
+    /* background: #f1f6f6; */ */
     border-color: none;
 }
 
@@ -429,6 +430,7 @@ blockquote footer cite {
 }
 
 .well {
+   background: ghostwhite;
    border-radius: 0 0 4px 4px;
    font-size: 18px;
 }
@@ -451,13 +453,16 @@ blockquote footer cite {
     padding: 2px 8px;
     font-size: 15px;
     font-weight: bold;
-    background-color: #656f7a; /* #dff0d8  002b5b */
-    color: #FFFFFF; /*#3c763d */
+    background-color: #474E5F; /* #dff0d8  002b5b */
+    color: #FFFFFF !important; /*#3c763d */
     padding:6px;
     border-radius: 4px 0 4px 0;
     font-weight: 400;
 }
 
+pre.prettyprint {
+   background: ghostwhite !important;
+}
 
 pre.prettyprint {
    border: none !important;
@@ -470,6 +475,21 @@ pre.prettyprint {
    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
+/* Adds individual lines to prettyprint */
+ol.linenums{
+    counter-reset:linenumber;
+}
+ol.linenums li{
+    list-style-type:none;
+    counter-increment:linenumber;
+}
+ol.linenums li:before{
+    content: counter(linenumber);
+    float:left;
+    margin-left:-4em;
+    text-align:right;
+    width:3em;
+}
 
 btn.copier {
    width: 40px;
@@ -685,13 +705,13 @@ h3.jumbotronic {
    font-size: 42px !important;
 }
 
-.btn-secondary-light {
-    color: #337ab7;
+.btn-secondary-dark {
+    color: #000000;
     background-color: transparent;
-    border-color: #2e6da4;
+    border-color: #000000;
 }
 
-.btn-secondary-dark {
+.btn-secondary-light {
    color: #FFFFFF;
    background-color: transparent;
    border-color: #FFFFFF;
