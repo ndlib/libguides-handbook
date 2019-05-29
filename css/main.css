@@ -725,6 +725,10 @@ h3.jumbotronic {
    background: #f5FaFa;
 }
 
+img {
+   box-shadow: 5px 10px 20px lightgray;
+}
+
 .image-grid img {
     margin-bottom: 1em;
 }
