@@ -712,6 +712,7 @@
                               <div style="margin-top:30px;">
                                  <button type="button" class="btn btn-default" id="clearFormatter">Reset</button>
                                  <button type="button" class="btn btn-primary" id="displayFormatter">Build</button>
+                                 &nbsp;&nbsp;&nbsp;<span class="alert alert-info hidden" id="proceed-next-step">Nice work! Proceed to next step.</span>
                               </div>
 
                            </div>
@@ -757,7 +758,7 @@
                                     </tr>
                                     <tr>
                                        <td>4</td>
-                                       <td>Assuming you've used the <a href="#title-the-guide">Title Builder Tool</a> (above), copy and paste the following into the <strong>Guide Name</strong> field:
+                                       <td>Assuming you've <a href="#title-the-guide">Titled Your Guide</a> correctly (above), copy and paste the following into the <strong>Guide Name</strong> field:
 
                                           <div class="well push-down">
 
@@ -1935,7 +1936,8 @@
 
          $('#displayFormatter').click(function() {
 
-
+            // show span for next step
+            $("#proceed-next-step").removeClass("hidden");
 
             var course1 = $('#dept-course-1').val();
             var course2 = $('#dept-course-2').val();
