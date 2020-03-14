@@ -140,6 +140,10 @@ h1 .small, h1 small {
    color: #002b5b;
 }
 
+.opacity-half {
+  opacity: .55;
+}
+
 .stepwise h1 {
    background: #337ab7;
    display: flex;
